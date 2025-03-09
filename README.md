@@ -44,3 +44,6 @@ Technologies Used
 Python
 Machine Learning Libraries (e.g., Scikit-learn, Pandas, NumPy)
 Data Cleaning and Analysis Tools
+
+## Data owner: 
+majdi.owda@aaup.edu
