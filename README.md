@@ -80,18 +80,18 @@ Gender-specific data transformation.
 Repository Structure
 Copy
 kidney-dysfunction-prediction/
-├── data/                            # Folder containing the dataset
-│   ├── raw_data.csv                 # Original dataset
-│   ├── cleaned_data_v1.csv          # Dataset with outliers dropped
-│   └── cleaned_data_v2.csv          # Dataset with outliers replaced
-├── notebooks/                       # Jupyter notebooks for analysis
-│   └── kidney_dysfunction_analysis.ipynb  # Main analysis notebook
-├── README.md                        # Project overview (this file)
-├── requirements.txt                 # List of dependencies
-└── visuals/                         # Folder for saving visualizations
-    ├── gender_distribution.png      # Gender-specific trends
-    ├── model_performance.png        # Model accuracy comparison
-    └── outlier_analysis.png         # Outlier handling visualization
+├── data/                           
+│   ├── raw_data.csv                
+│   ├── cleaned_data_v1.csv          
+│   └── cleaned_data_v2.csv          
+├── notebooks/                       
+│   └── kidney_dysfunction_analysis.ipynb  
+├── README.md                      
+├── requirements.txt                
+└── visuals/                        
+    ├── gender_distribution.png     
+    ├── model_performance.png       
+    └── outlier_analysis.png         
 
 ## Conclusion
 This project demonstrates the effectiveness of machine learning models in predicting early-stage kidney dysfunction in diabetic patients. By analyzing Fasting Blood Sugar and Creatinine levels, the study highlights gender-specific trends and the importance of proper data preprocessing. The findings can assist healthcare professionals in early diagnosis and intervention.
