@@ -1,4 +1,4 @@
-# Early Prediction of Kidney Dysfunction in Diabetic Patients
+# Early Prediction of Kidney Dysfunction in Diabetic Patients: 
 
 ## Overview
 This project focuses on the early prediction of kidney dysfunction in diabetic patients by analyzing key health indicators such as Fasting Blood Sugar (FBS) and Creatinine levels. Using machine learning models, the study aims to identify patterns and risk factors associated with early-stage kidney dysfunction. The dataset consists of 499 samples with 13 features, which underwent rigorous preprocessing and analysis to improve model performance.
