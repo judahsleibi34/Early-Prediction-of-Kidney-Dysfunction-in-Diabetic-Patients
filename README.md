@@ -1,49 +1,110 @@
 # Early Prediction of Kidney Dysfunction in Diabetic Patients
 
 ## Overview
-This project investigates the early prediction of kidney dysfunction in diabetic patients by analyzing Fasting Blood Sugar 
-and Creatinine levels using machine learning models. The study leverages a dataset consisting of 499 samples with 13 features, 
-undergoing rigorous preprocessing and analysis to improve model performance.
+This project focuses on the early prediction of kidney dysfunction in diabetic patients by analyzing key health indicators such as Fasting Blood Sugar (FBS) and Creatinine levels. Using machine learning models, the study aims to identify patterns and risk factors associated with early-stage kidney dysfunction. The dataset consists of 499 samples with 13 features, which underwent rigorous preprocessing and analysis to improve model performance.
+
+## Dataset Overview
+The dataset includes the following key features:
+
+1. Fasting Blood Sugar (FBS): A critical indicator of diabetes.
+
+2. Creatinine Levels: A key marker for kidney function.
+
+3. Gender: Analyzed to understand gender-specific trends.
+
+4. Other Health Metrics: Additional features contributing to the analysis.
 
 ## Data Preprocessing
+The dataset was processed in three key stages to ensure high-quality input for machine learning models:
 
-The dataset was processed in three key stages:
+1. Cleaning
+Handled missing data and outliers to ensure data integrity.
 
-1. Cleaning: 
-Handling missing data and outliers.
+Identified and addressed inconsistencies in the dataset.
 
-2. Integration: 
-Creating two versions of the dataset:
+2. Integration
+Created two versions of the dataset:
 
-  One where outliers were dropped, resulting in a dataset of size 310x13.
-  One where outliers were replaced with mean values, resulting in a dataset of size 496x13.
+Version 1: Outliers were dropped, resulting in a dataset of size 310x13.
 
-3. Transformation: 
-Analyzing gender-specific distributions of Creatinine and Fasting Blood Sugar levels.
+Version 2: Outliers were replaced with mean values, resulting in a dataset of size 496x13.
+
+3. Transformation
+Analyzed gender-specific distributions of Creatinine and Fasting Blood Sugar levels.
+
+Addressed gender imbalance to improve model performance.
 
 ## Key Findings
+Gender-Specific Trends:
 
 Females tend to have higher Creatinine and Fasting Blood Sugar levels compared to males.
-Gender imbalance in the first dataset affected model performance, while maintaining original distribution in the second dataset led to more consistent results.
+
 Diabetic women exhibit a higher rate of early-stage kidney dysfunction compared to men.
 
+Impact of Data Preprocessing:
+
+The first dataset (outliers dropped) showed reduced performance due to gender imbalance.
+
+The second dataset (outliers replaced with mean values) maintained the original distribution, leading to more consistent and reliable results.
+
 ## Model Performance
+The following machine learning models were applied to the two datasets, yielding the following infection rate predictions:
 
-The machine learning models applied to the two datasets yielded the following infection rate predictions:
+### Random Forest
+First Dataset (Outliers Dropped): 98.39% accuracy.
 
-Random forest:
-First dataset (outliers dropped): 98.39%
-Second dataset (outliers replaced with mean values): 98.39%
+Second Dataset (Outliers Replaced with Mean Values): 98.39% accuracy.
 
-KNN model:
-First dataset (outliers dropped): 90.53%
-Second dataset (outliers replaced with mean values): 95.48%
+### KNN Model
+First Dataset (Outliers Dropped): 90.53% accuracy.
 
-Technologies Used
+Second Dataset (Outliers Replaced with Mean Values): 95.48% accuracy.
 
-Python
-Machine Learning Libraries (e.g., Scikit-learn, Pandas, NumPy)
-Data Cleaning and Analysis Tools
+## Technologies Used
+Programming Language: Python
 
-## Data owner: 
-majdi.owda@aaup.edu
+## Libraries:
+
+1. Scikit-learn (for machine learning models).
+
+2. Pandas (for data manipulation and analysis).
+
+3. NumPy (for numerical computations).
+
+## Data Cleaning and Analysis Tools:
+
+Outlier detection and handling.
+
+Gender-specific data transformation.
+
+Repository Structure
+Copy
+kidney-dysfunction-prediction/
+├── data/                            # Folder containing the dataset
+│   ├── raw_data.csv                 # Original dataset
+│   ├── cleaned_data_v1.csv          # Dataset with outliers dropped
+│   └── cleaned_data_v2.csv          # Dataset with outliers replaced
+├── notebooks/                       # Jupyter notebooks for analysis
+│   └── kidney_dysfunction_analysis.ipynb  # Main analysis notebook
+├── README.md                        # Project overview (this file)
+├── requirements.txt                 # List of dependencies
+└── visuals/                         # Folder for saving visualizations
+    ├── gender_distribution.png      # Gender-specific trends
+    ├── model_performance.png        # Model accuracy comparison
+    └── outlier_analysis.png         # Outlier handling visualization
+
+## Conclusion
+This project demonstrates the effectiveness of machine learning models in predicting early-stage kidney dysfunction in diabetic patients. By analyzing Fasting Blood Sugar and Creatinine levels, the study highlights gender-specific trends and the importance of proper data preprocessing. The findings can assist healthcare professionals in early diagnosis and intervention.
+
+## Future Work
+Incorporate additional health metrics (e.g., blood pressure, cholesterol levels) to improve prediction accuracy.
+
+Explore deep learning models for more complex pattern recognition.
+
+Conduct a larger-scale study with a more diverse dataset.
+
+## Data Owner
+For questions or access to the dataset, please contact:
+Majdi Owda
+Email: majdi.owda@aaup.edu
+
